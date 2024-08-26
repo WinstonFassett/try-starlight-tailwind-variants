@@ -9,7 +9,7 @@ import lit from "@astrojs/lit";
 // https://astro.build/config
 export default defineConfig({
   integrations: [starlight({
-    title: 'Docs with Tailwind',
+    title: 'Design System Docs',
     social: {
       github: 'https://github.com/withastro/starlight'
     },
