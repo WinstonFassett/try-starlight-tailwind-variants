@@ -11,7 +11,7 @@ export default defineConfig({
   integrations: [starlight({
     title: 'Design System Docs',
     social: {
-      github: 'https://github.com/withastro/starlight'
+      github: 'https://github.com/WinstonFassett/try-starlight-tailwind-variants'
     },
     sidebar: [{
       label: 'Guides',
