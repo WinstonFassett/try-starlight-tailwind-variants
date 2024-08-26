@@ -1,0 +1,32 @@
+---
+import { card } from './card'
+const { base, avatar, wrapper, description, infoWrapper, name, role } = card();
+---
+
+<figure class={base({ class: 'bg-purple-100 dark:bg-purple-800' })}>
+  <img
+    class={avatar()}
+    alt=""
+    width="384"
+    height="512"
+  />
+  <div class={wrapper()}>
+    <blockquote>
+      <p class={description()}>
+        “Tailwind variants allows you to reduce repeated code in your project
+        and make it more readable. They fixed the headache of building a
+        design system with TailwindCSS.”
+      </p>
+    </blockquote>
+    <figcaption class={infoWrapper()}>
+      <div
+        class={name({ class: 'text-purple-500 dark:text-purple-200' })}
+      >
+        Zoey Lang
+      </div>
+      <div class={role({ class: 'dark:text-purple-100' })}>
+        Full-stack developer, NextUI
+      </div>
+    </figcaption>
+  </div>
+</figure>
