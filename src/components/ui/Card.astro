@@ -3,9 +3,10 @@ import { card } from './theme/card'
 const { base, avatar, wrapper, description, infoWrapper, name, role } = card();
 ---
 
-<figure class={base({ class: 'bg-purple-100 dark:bg-purple-800' })}>
+  <figure class={base()}>
   <img
     class={avatar()}
+    src="https://www.tailwind-variants.org/_next/image?url=%2Fintro-avatar.png&w=384&q=75"
     alt=""
     width="384"
     height="512"
@@ -19,14 +20,8 @@ const { base, avatar, wrapper, description, infoWrapper, name, role } = card();
       </p>
     </blockquote>
     <figcaption class={infoWrapper()}>
-      <div
-        class={name({ class: 'text-purple-500 dark:text-purple-200' })}
-      >
-        Zoey Lang
-      </div>
-      <div class={role({ class: 'dark:text-purple-100' })}>
-        Full-stack developer, NextUI
-      </div>
+      <div class={name()}>Zoey Lang</div>
+      <div class={role()}>Full-stack developer, NextUI</div>
     </figcaption>
   </div>
 </figure>
