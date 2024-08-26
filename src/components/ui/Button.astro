@@ -1,10 +1,8 @@
 ---
-import { button } from './button'
-import type { ButtonVariants as Props } from './button'
-
-const { size, color } = Astro.props
+import { button } from './theme/button'
+import type { ButtonVariants as Props } from './theme/button'
 ---
 
-<button class={button({ size, color })}>
+<button class={button(Astro.props)}>
   <slot />
 </button>
