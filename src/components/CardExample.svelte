@@ -1,9 +1,10 @@
----
-import { card } from './theme/card'
+<script lang="ts">
+import { card } from '@/components/ui/theme/card';  
 const { base, avatar, wrapper, description, infoWrapper, name, role } = card();
----
 
-  <figure class={base()}>
+</script>
+
+<figure class={base()}>
   <img
     class={avatar()}
     src="https://www.tailwind-variants.org/_next/image?url=%2Fintro-avatar.png&w=384&q=75"
