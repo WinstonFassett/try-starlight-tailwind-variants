@@ -1,9 +1,10 @@
 import { tv } from 'tailwind-variants';
  
 export const button = tv({
-  base: 'font-medium bg-blue-500 text-white rounded-full active:opacity-80',
+  base: 'font-medium rounded-full hover:opacity-90 active:opacity-80',
   variants: {
     color: {
+      default: '',
       primary: 'bg-blue-500 text-white',
       secondary: 'bg-purple-500 text-white'
     },
@@ -21,7 +22,7 @@ export const button = tv({
   ],
   defaultVariants: {
     size: 'md',
-    color: 'primary'
+    color: 'default'
   }
 });
  

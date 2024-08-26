@@ -1,7 +1,12 @@
 ---
 import { button } from './button'
+
+type Props = Parameters<typeof button>[0]
+
+const { size, color } = Astro.props
 ---
 
-<button class={button({ size: 'sm', color: 'secondary' })}>
-  Click me
+<button class={button({ size, color })}>
+  
+  <slot />
 </button>
