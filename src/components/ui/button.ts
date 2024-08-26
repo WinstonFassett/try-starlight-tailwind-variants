@@ -1,4 +1,4 @@
-import { tv } from 'tailwind-variants';
+import { tv, type VariantProps } from 'tailwind-variants';
  
 export const button = tv({
   base: 'font-medium rounded-full hover:opacity-90 active:opacity-80',
@@ -25,4 +25,4 @@ export const button = tv({
     color: 'default'
   }
 });
- 
+export type ButtonVariants = VariantProps<typeof button>;
