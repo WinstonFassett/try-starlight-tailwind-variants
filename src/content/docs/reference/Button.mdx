@@ -2,26 +2,38 @@
 title: Button
 # description: A reference page in my new Starlight docs site.
 ---
-import Button from '@/components/ui/Button.astro'
-import Card from '@/components/ui/Card.astro'
 import { Button as ReactButton } from '@/components/ui/Button'
+import AstroButton from '@/components/ui/Button.astro'
 import SvelteButton from '@/components/ui/Button.svelte'
-import { Button as ShadButton } from '@/components/ui/ShadButton';
 
 Buttons are for pressing.
 
 ## Examples
 
-<Button>Default</Button>
-<Button color='primary'>Primary</Button>
-<Button color='secondary'>Secondary</Button>
-<Button size='sm'>Small</Button>
-<Button size='md'>Medium</Button>
-<Button size='lg'>Large</Button>
+### Astro
 
+<AstroButton>Default</AstroButton>
+<AstroButton color='primary'>Primary</AstroButton>
+<AstroButton color='secondary'>Secondary</AstroButton>
+<AstroButton size='sm'>Small</AstroButton>
+<AstroButton size='md'>Medium</AstroButton>
+<AstroButton size='lg'>Large</AstroButton>
 
-<ReactButton color='primary' size='sm'>Small Primary ReactButton</ReactButton>
+### React
 
-<SvelteButton color='secondary' size='lg'>Large Secondary SvelteButton</SvelteButton>
+<ReactButton>Default</ReactButton>
+<ReactButton color='primary'>Primary</ReactButton>
+<ReactButton color='secondary'>Secondary</ReactButton>
+<ReactButton size='sm'>Small</ReactButton>
+<ReactButton size='md'>Medium</ReactButton>
+<ReactButton size='lg'>Large</ReactButton>
 
-<ShadButton>ShadButton</ShadButton>
+### Svelte
+
+<SvelteButton>Default</SvelteButton>
+<SvelteButton color='primary'>Primary</SvelteButton>
+<SvelteButton color='secondary'>Secondary</SvelteButton>
+<SvelteButton size='sm'>Small</SvelteButton>
+<SvelteButton size='md'>Medium</SvelteButton>
+<SvelteButton size='lg'>Large</SvelteButton>
+
