@@ -1,29 +1,28 @@
 ---
-title: Card Example
+title: Card
 # description: A reference page in my new Starlight docs site.
 ---
 import AstroCard from '@/components/CardExample.astro'
 import {CardExample as ReactCard } from '@/components/CardExample.tsx'
 import SvelteCard from '@/components/CardExample.svelte'
 
+A card component for displaying content in a structured layout with avatar, description, and metadata.
 
-## Card
+## Usage
 
+<div class="not-content">
+<div class="space-y-6">
 
 ### Astro
 
-<div class="not-content">
   <AstroCard />
-</div>
 
 ### React
 
-<div class="not-content">
   <ReactCard />
-</div>
 
 ### Svelte
 
-<div class="not-content">
   <SvelteCard />
+</div>
 </div>
