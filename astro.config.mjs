@@ -23,7 +23,7 @@ export default defineConfig({
       }, {
         label: 'Svelte',
         slug: 'guides/svelte'
-      }
+      },
       {
         label: 'Astro',
         slug: 'guides/astro'
