@@ -1,6 +1,6 @@
 # Starlight Tailwind Design System
 
-Multi-Framework Design System built with Tailwind Variants and Astro
+Multi-Framework Design System built with Tailwind Variants
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
