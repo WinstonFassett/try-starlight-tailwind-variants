@@ -10,7 +10,9 @@ A badge component for displaying status, labels, and other small pieces of infor
 
 ## Examples
 
-### Astro
+### Color
+
+#### Astro
 
 <div class="flex flex-wrap gap-2">
   <AstroBadge>Default</AstroBadge>
@@ -19,7 +21,7 @@ A badge component for displaying status, labels, and other small pieces of infor
   <AstroBadge variant="outline">Outline</AstroBadge>
 </div>
 
-### React
+#### React
 
 <div class="flex flex-wrap gap-2">
   <ReactBadge>Default</ReactBadge>
@@ -28,7 +30,7 @@ A badge component for displaying status, labels, and other small pieces of infor
   <ReactBadge variant="outline">Outline</ReactBadge>
 </div>
 
-### Svelte
+#### Svelte
 
 <div class="flex flex-wrap gap-2">
   <SvelteBadge>Default</SvelteBadge>
@@ -37,7 +39,28 @@ A badge component for displaying status, labels, and other small pieces of infor
   <SvelteBadge variant="outline">Outline</SvelteBadge>
 </div>
 
-## Usage Examples
+### Standard
+
+#### Astro
+
+<div class="space-y-4">
+  <div class="flex items-center gap-2">
+    <span>Status:</span>
+    <AstroBadge variant="secondary">Active</AstroBadge>
+  </div>
+  
+  <div class="flex items-center gap-2">
+    <span>Priority:</span>
+    <AstroBadge variant="destructive">High</AstroBadge>
+  </div>
+  
+  <div class="flex items-center gap-2">
+    <span>Category:</span>
+    <AstroBadge variant="outline">Design</AstroBadge>
+  </div>
+</div>
+
+#### React
 
 <div class="space-y-4">
   <div class="flex items-center gap-2">
@@ -54,4 +77,3 @@ A badge component for displaying status, labels, and other small pieces of infor
     <span>Category:</span>
     <ReactBadge variant="outline">Design</ReactBadge>
   </div>
-</div>

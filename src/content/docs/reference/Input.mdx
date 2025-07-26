@@ -13,7 +13,9 @@ A basic input component for forms and user input.
 
 ## Examples
 
-### Astro
+### Standard
+
+#### Astro
 
 <div class="space-y-4">
   <div class="space-y-2">
@@ -37,7 +39,7 @@ A basic input component for forms and user input.
   </div>
 </div>
 
-### React
+#### React
 
 <div class="space-y-4">
   <div class="space-y-2">
@@ -61,7 +63,7 @@ A basic input component for forms and user input.
   </div>
 </div>
 
-### Svelte
+#### Svelte
 
 <div class="space-y-4">
   <div class="space-y-2">
@@ -85,13 +87,18 @@ A basic input component for forms and user input.
   </div>
 </div>
 
-## Sizes
+### Size
 
-### Small
-<ReactInput size="sm" placeholder="Small input..." />
+#### Astro
+<div class="space-y-2">
+  <AstroInput size="sm" placeholder="Small input..." />
+  <AstroInput placeholder="Default input..." />
+  <AstroInput size="lg" placeholder="Large input..." />
+</div>
 
-### Default
-<ReactInput placeholder="Default input..." />
-
-### Large
-<ReactInput size="lg" placeholder="Large input..." />
+#### React
+<div class="space-y-2">
+  <ReactInput size="sm" placeholder="Small input..." />
+  <ReactInput placeholder="Default input..." />
+  <ReactInput size="lg" placeholder="Large input..." />
+</div>

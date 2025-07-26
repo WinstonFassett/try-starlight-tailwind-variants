@@ -18,5 +18,4 @@ const { class: className, ...props } = Astro.props as AstroProps;
 ---
 
 <textarea class={textarea({ ...props, class: className })} {...props}>
-  <slot />
 </textarea>
