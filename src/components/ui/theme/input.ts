@@ -15,9 +15,9 @@ export const input = tv({
       destructive: 'border-red-500 focus-visible:ring-red-500',
     },
     size: {
-      default: 'h-10 px-3 py-2',
-      sm: 'h-9 px-3',
-      lg: 'h-11 px-8',
+      default: 'h-10 px-3 py-2 text-sm',
+      sm: 'h-8 px-2 py-1 text-xs',
+      lg: 'h-12 px-4 py-3 text-base',
     }
   },
   defaultVariants: {

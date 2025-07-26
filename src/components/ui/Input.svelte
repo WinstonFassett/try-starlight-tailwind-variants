@@ -3,17 +3,10 @@
   import type { InputVariants } from '@/components/ui/theme/input';
   import type { HTMLInputAttributes } from 'svelte/elements';
   
-  type $$Props = HTMLInputAttributes & InputVariants & {
-    value?: string;
-  }
+  type $$Props = HTMLInputAttributes & InputVariants;
   
   export let variant: $$Props['variant'] = 'default';
   export let size: $$Props['size'] = 'default';
-  export let value: $$Props['value'] = '';
 </script>
 
-<input 
-  bind:value 
-  class={input({ variant, size, class: $$props.class})} 
-  {...$$restProps}
-/>
+<input class={input({ variant, size, class: $$props.class})} {...$$restProps} />
