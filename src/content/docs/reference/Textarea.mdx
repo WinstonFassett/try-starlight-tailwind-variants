@@ -1,0 +1,56 @@
+---
+title: Textarea
+description: Textarea component for multi-line text input
+---
+import { Textarea as ReactTextarea } from '@/components/ui/Textarea'
+import { Label as ReactLabel } from '@/components/ui/Label'
+import AstroTextarea from '@/components/ui/Textarea.astro'
+import AstroLabel from '@/components/ui/Label.astro'
+import SvelteTextarea from '@/components/ui/Textarea.svelte'
+import SvelteLabel from '@/components/ui/Label.svelte'
+
+A textarea component for multi-line text input.
+
+## Examples
+
+### Astro
+
+<div class="space-y-4">
+  <div class="space-y-2">
+    <AstroLabel for="astro-textarea">Message</AstroLabel>
+    <AstroTextarea id="astro-textarea" placeholder="Type your message here..." />
+  </div>
+  
+  <div class="space-y-2">
+    <AstroLabel for="astro-textarea-error" variant="destructive">Error State</AstroLabel>
+    <AstroTextarea id="astro-textarea-error" variant="destructive" placeholder="Invalid input..." />
+  </div>
+</div>
+
+### React
+
+<div class="space-y-4">
+  <div class="space-y-2">
+    <ReactLabel htmlFor="react-textarea">Message</ReactLabel>
+    <ReactTextarea id="react-textarea" placeholder="Type your message here..." />
+  </div>
+  
+  <div class="space-y-2">
+    <ReactLabel htmlFor="react-textarea-error" variant="destructive">Error State</ReactLabel>
+    <ReactTextarea id="react-textarea-error" variant="destructive" placeholder="Invalid input..." />
+  </div>
+</div>
+
+### Svelte
+
+<div class="space-y-4">
+  <div class="space-y-2">
+    <SvelteLabel for="svelte-textarea">Message</SvelteLabel>
+    <SvelteTextarea id="svelte-textarea" placeholder="Type your message here..." />
+  </div>
+  
+  <div class="space-y-2">
+    <SvelteLabel for="svelte-textarea-error" variant="destructive">Error State</SvelteLabel>
+    <SvelteTextarea id="svelte-textarea-error" variant="destructive" placeholder="Invalid input..." />
+  </div>
+</div>

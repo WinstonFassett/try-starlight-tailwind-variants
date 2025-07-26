@@ -1,0 +1,97 @@
+---
+title: Input
+description: Input component for forms and user input
+---
+import { Input as ReactInput } from '@/components/ui/Input'
+import { Label as ReactLabel } from '@/components/ui/Label'
+import AstroInput from '@/components/ui/Input.astro'
+import AstroLabel from '@/components/ui/Label.astro'
+import SvelteInput from '@/components/ui/Input.svelte'
+import SvelteLabel from '@/components/ui/Label.svelte'
+
+A basic input component for forms and user input.
+
+## Examples
+
+### Astro
+
+<div class="space-y-4">
+  <div class="space-y-2">
+    <AstroLabel for="astro-default">Default Input</AstroLabel>
+    <AstroInput id="astro-default" placeholder="Enter text..." />
+  </div>
+  
+  <div class="space-y-2">
+    <AstroLabel for="astro-email">Email Input</AstroLabel>
+    <AstroInput id="astro-email" type="email" placeholder="Enter your email..." />
+  </div>
+  
+  <div class="space-y-2">
+    <AstroLabel for="astro-destructive" variant="destructive">Error State</AstroLabel>
+    <AstroInput id="astro-destructive" variant="destructive" placeholder="Invalid input..." />
+  </div>
+  
+  <div class="space-y-2">
+    <AstroLabel for="astro-disabled">Disabled Input</AstroLabel>
+    <AstroInput id="astro-disabled" disabled placeholder="Disabled..." />
+  </div>
+</div>
+
+### React
+
+<div class="space-y-4">
+  <div class="space-y-2">
+    <ReactLabel htmlFor="react-default">Default Input</ReactLabel>
+    <ReactInput id="react-default" placeholder="Enter text..." />
+  </div>
+  
+  <div class="space-y-2">
+    <ReactLabel htmlFor="react-email">Email Input</ReactLabel>
+    <ReactInput id="react-email" type="email" placeholder="Enter your email..." />
+  </div>
+  
+  <div class="space-y-2">
+    <ReactLabel htmlFor="react-destructive" variant="destructive">Error State</ReactLabel>
+    <ReactInput id="react-destructive" variant="destructive" placeholder="Invalid input..." />
+  </div>
+  
+  <div class="space-y-2">
+    <ReactLabel htmlFor="react-disabled">Disabled Input</ReactLabel>
+    <ReactInput id="react-disabled" disabled placeholder="Disabled..." />
+  </div>
+</div>
+
+### Svelte
+
+<div class="space-y-4">
+  <div class="space-y-2">
+    <SvelteLabel for="svelte-default">Default Input</SvelteLabel>
+    <SvelteInput id="svelte-default" placeholder="Enter text..." />
+  </div>
+  
+  <div class="space-y-2">
+    <SvelteLabel for="svelte-email">Email Input</SvelteLabel>
+    <SvelteInput id="svelte-email" type="email" placeholder="Enter your email..." />
+  </div>
+  
+  <div class="space-y-2">
+    <SvelteLabel for="svelte-destructive" variant="destructive">Error State</SvelteLabel>
+    <SvelteInput id="svelte-destructive" variant="destructive" placeholder="Invalid input..." />
+  </div>
+  
+  <div class="space-y-2">
+    <SvelteLabel for="svelte-disabled">Disabled Input</SvelteLabel>
+    <SvelteInput id="svelte-disabled" disabled placeholder="Disabled..." />
+  </div>
+</div>
+
+## Sizes
+
+### Small
+<ReactInput size="sm" placeholder="Small input..." />
+
+### Default
+<ReactInput placeholder="Default input..." />
+
+### Large
+<ReactInput size="lg" placeholder="Large input..." />

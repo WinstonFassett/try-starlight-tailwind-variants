@@ -1,0 +1,19 @@
+---
+import { input } from './theme/input'
+import type { InputVariants as Props } from './theme/input'
+
+interface AstroProps extends Props {
+  type?: string;
+  placeholder?: string;
+  value?: string;
+  name?: string;
+  id?: string;
+  disabled?: boolean;
+  required?: boolean;
+  class?: string;
+}
+
+const { class: className, ...props } = Astro.props as AstroProps;
+---
+
+<input class={input({ ...props, class: className })} {...props} />

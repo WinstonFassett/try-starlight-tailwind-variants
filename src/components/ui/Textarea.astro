@@ -1,0 +1,22 @@
+---
+import { textarea } from './theme/textarea'
+import type { TextareaVariants as Props } from './theme/textarea'
+
+interface AstroProps extends Props {
+  placeholder?: string;
+  value?: string;
+  name?: string;
+  id?: string;
+  disabled?: boolean;
+  required?: boolean;
+  rows?: number;
+  cols?: number;
+  class?: string;
+}
+
+const { class: className, ...props } = Astro.props as AstroProps;
+---
+
+<textarea class={textarea({ ...props, class: className })} {...props}>
+  <slot />
+</textarea>

@@ -1,0 +1,14 @@
+---
+import { badge } from './theme/badge'
+import type { BadgeVariants as Props } from './theme/badge'
+
+interface AstroProps extends Props {
+  class?: string;
+}
+
+const { class: className, ...props } = Astro.props as AstroProps;
+---
+
+<div class={badge({ ...props, class: className })}>
+  <slot />
+</div>

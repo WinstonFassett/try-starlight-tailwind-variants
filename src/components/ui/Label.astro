@@ -1,0 +1,15 @@
+---
+import { label } from './theme/label'
+import type { LabelVariants as Props } from './theme/label'
+
+interface AstroProps extends Props {
+  for?: string;
+  class?: string;
+}
+
+const { class: className, ...props } = Astro.props as AstroProps;
+---
+
+<label class={label({ ...props, class: className })} {...props}>
+  <slot />
+</label>
