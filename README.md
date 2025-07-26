@@ -1,4 +1,4 @@
-# Starlight Tailwind Design System
+# Starlight Tailwind Variants Design System
 
 Multi-Framework Design System built with Tailwind Variants
 
