@@ -9,8 +9,6 @@ Multi-Framework Design System built with Tailwind Variants
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/WinstonFassett/try-starlight-tailwind-variants&create_from_path=examples/tailwind)
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%WinstonFassett%2Ftry-starlight-tailwind-variants&project-name=my-starlight-tailwind-variants&repository-name=my-starlight-tailwind-variants)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
 ## 🚀 Project Structure
 
 Inside of your Astro + Starlight project, you'll see the following folders and files:
