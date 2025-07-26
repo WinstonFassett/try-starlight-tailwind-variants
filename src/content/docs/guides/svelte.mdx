@@ -1,0 +1,102 @@
+---
+title: Svelte Guide
+description: How to install and use starlight-tailwind-variants in Svelte
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import SvelteBadge from '@/components/ui/Badge.svelte'
+import SvelteInput from '@/components/ui/Input.svelte'
+import SvelteButton from '@/components/ui/Button.svelte'
+import SvelteLabel from '@/components/ui/Label.svelte'
+
+## Installation
+
+Install the starlight-tailwind-variants package:
+
+```bash
+npm install starlight-tailwind-variants
+```
+
+Install Svelte and required dependencies:
+
+```bash
+npm install svelte @astrojs/svelte
+```
+
+## Usage
+
+Here's how to create a simple form card using Svelte components:
+
+### Code
+
+```svelte
+<script>
+  import Badge from '@/components/ui/Badge.svelte'
+  import Input from '@/components/ui/Input.svelte'
+  import Button from '@/components/ui/Button.svelte'
+  import Label from '@/components/ui/Label.svelte'
+  
+  let name = '';
+  let email = '';
+  
+  function handleSubmit() {
+    console.log('Form submitted:', { name, email });
+  }
+</script>
+
+<div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6 space-y-4">
+  <div class="flex items-center justify-between">
+    <h2 class="text-xl font-semibold">Contact Form</h2>
+    <Badge variant="secondary">New</Badge>
+  </div>
+  
+  <div class="space-y-2">
+    <Label for="name">Full Name</Label>
+    <Input id="name" bind:value={name} placeholder="Enter your name..." />
+  </div>
+  
+  <div class="space-y-2">
+    <Label for="email">Email</Label>
+    <Input id="email" type="email" bind:value={email} placeholder="Enter your email..." />
+  </div>
+  
+  <div class="flex gap-2">
+    <Button color="primary" on:click={handleSubmit}>Submit</Button>
+    <Button>Cancel</Button>
+  </div>
+</div>
+```
+
+### Live Demo
+
+<div class="not-content">
+<div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6 space-y-4">
+  <div class="flex items-center justify-between">
+    <h2 class="text-xl font-semibold">Contact Form</h2>
+    <SvelteBadge variant="secondary">New</SvelteBadge>
+  </div>
+  
+  <div class="space-y-2">
+    <SvelteLabel for="svelte-name">Full Name</SvelteLabel>
+    <SvelteInput id="svelte-name" placeholder="Enter your name..." />
+  </div>
+  
+  <div class="space-y-2">
+    <SvelteLabel for="svelte-email">Email</SvelteLabel>
+    <SvelteInput id="svelte-email" type="email" placeholder="Enter your email..." />
+  </div>
+  
+  <div class="flex gap-2">
+    <SvelteButton color="primary">Submit</SvelteButton>
+    <SvelteButton>Cancel</SvelteButton>
+  </div>
+</div>
+</div>
+
+## Component Features
+
+- **Reactive**: Built-in reactivity with Svelte's reactive statements
+- **TypeScript**: Full TypeScript support with proper prop types
+- **Two-way Binding**: Easy data binding with `bind:` directives
+- **Event Handling**: Simple event handling with `on:` directives
+- **Lightweight**: Minimal runtime overhead with compile-time optimizations

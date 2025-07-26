@@ -1,0 +1,97 @@
+---
+title: React Guide
+description: How to install and use starlight-tailwind-variants in React
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Badge as ReactBadge } from '@/components/ui/Badge'
+import { Input as ReactInput } from '@/components/ui/Input'
+import { Button as ReactButton } from '@/components/ui/Button'
+import { Label as ReactLabel } from '@/components/ui/Label'
+
+## Installation
+
+Install the starlight-tailwind-variants package:
+
+```bash
+npm install starlight-tailwind-variants
+```
+
+Install React and required dependencies:
+
+```bash
+npm install react react-dom @types/react @types/react-dom
+```
+
+## Usage
+
+Here's how to create a simple form card using React components:
+
+### Code
+
+```tsx
+import { Badge } from '@/components/ui/Badge'
+import { Input } from '@/components/ui/Input'
+import { Button } from '@/components/ui/Button'
+import { Label } from '@/components/ui/Label'
+
+export function ContactForm() {
+  return (
+    <div className="max-w-md mx-auto bg-white rounded-lg shadow-md p-6 space-y-4">
+      <div className="flex items-center justify-between">
+        <h2 className="text-xl font-semibold">Contact Form</h2>
+        <Badge variant="secondary">New</Badge>
+      </div>
+      
+      <div className="space-y-2">
+        <Label htmlFor="name">Full Name</Label>
+        <Input id="name" placeholder="Enter your name..." />
+      </div>
+      
+      <div className="space-y-2">
+        <Label htmlFor="email">Email</Label>
+        <Input id="email" type="email" placeholder="Enter your email..." />
+      </div>
+      
+      <div className="flex gap-2">
+        <Button color="primary">Submit</Button>
+        <Button>Cancel</Button>
+      </div>
+    </div>
+  )
+}
+```
+
+### Live Demo
+
+<div class="not-content">
+<div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6 space-y-4">
+  <div class="flex items-center justify-between">
+    <h2 class="text-xl font-semibold">Contact Form</h2>
+    <ReactBadge variant="secondary">New</ReactBadge>
+  </div>
+  
+  <div class="space-y-2">
+    <ReactLabel htmlFor="react-name">Full Name</ReactLabel>
+    <ReactInput id="react-name" placeholder="Enter your name..." />
+  </div>
+  
+  <div class="space-y-2">
+    <ReactLabel htmlFor="react-email">Email</ReactLabel>
+    <ReactInput id="react-email" type="email" placeholder="Enter your email..." />
+  </div>
+  
+  <div class="flex gap-2">
+    <ReactButton color="primary">Submit</ReactButton>
+    <ReactButton>Cancel</ReactButton>
+  </div>
+</div>
+</div>
+
+## Component Features
+
+- **React 18 Ready**: Full support for React 18 features
+- **TypeScript**: Complete type safety with proper prop types
+- **Forwardable Refs**: All components support ref forwarding
+- **Event Handling**: Proper event handling with TypeScript support
+- **Flexible**: Easy to compose and extend for your needs

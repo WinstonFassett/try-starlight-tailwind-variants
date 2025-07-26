@@ -18,8 +18,14 @@ export default defineConfig({
       items: [
       // Each item here is one entry in the navigation menu.
       {
-        label: 'Example Guide',
-        slug: 'guides/example'
+        label: 'Astro',
+        slug: 'guides/astro'
+      }, {
+        label: 'React',
+        slug: 'guides/react'
+      }, {
+        label: 'Svelte',
+        slug: 'guides/svelte'
       }]
     }, {
       label: 'Components',

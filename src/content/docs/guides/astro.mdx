@@ -1,0 +1,98 @@
+---
+title: Astro Guide
+description: How to install and use starlight-tailwind-variants in Astro
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Badge as ReactBadge } from '@/components/ui/Badge'
+import { Input as ReactInput } from '@/components/ui/Input'
+import { Button as ReactButton } from '@/components/ui/Button'
+import { Label as ReactLabel } from '@/components/ui/Label'
+import AstroBadge from '@/components/ui/Badge.astro'
+import AstroInput from '@/components/ui/Input.astro'
+import AstroButton from '@/components/ui/Button.astro'
+import AstroLabel from '@/components/ui/Label.astro'
+
+## Installation
+
+Install the starlight-tailwind-variants package:
+
+```bash
+npm install starlight-tailwind-variants
+```
+
+Add Tailwind CSS to your Astro project:
+
+```bash
+npx astro add tailwind
+```
+
+## Usage
+
+Here's how to create a simple form card using Astro components:
+
+### Code
+
+```astro
+---
+import Badge from '@/components/ui/Badge.astro'
+import Input from '@/components/ui/Input.astro'
+import Button from '@/components/ui/Button.astro'
+import Label from '@/components/ui/Label.astro'
+---
+
+<div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6 space-y-4">
+  <div class="flex items-center justify-between">
+    <h2 class="text-xl font-semibold">Contact Form</h2>
+    <Badge variant="secondary">New</Badge>
+  </div>
+  
+  <div class="space-y-2">
+    <Label for="name">Full Name</Label>
+    <Input id="name" placeholder="Enter your name..." />
+  </div>
+  
+  <div class="space-y-2">
+    <Label for="email">Email</Label>
+    <Input id="email" type="email" placeholder="Enter your email..." />
+  </div>
+  
+  <div class="flex gap-2">
+    <Button color="primary">Submit</Button>
+    <Button>Cancel</Button>
+  </div>
+</div>
+```
+
+### Live Demo
+
+<div class="not-content">
+<div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6 space-y-4">
+  <div class="flex items-center justify-between">
+    <h2 class="text-xl font-semibold">Contact Form</h2>
+    <AstroBadge variant="secondary">New</AstroBadge>
+  </div>
+  
+  <div class="space-y-2">
+    <AstroLabel for="astro-name">Full Name</AstroLabel>
+    <AstroInput id="astro-name" placeholder="Enter your name..." />
+  </div>
+  
+  <div class="space-y-2">
+    <AstroLabel for="astro-email">Email</AstroLabel>
+    <AstroInput id="astro-email" type="email" placeholder="Enter your email..." />
+  </div>
+  
+  <div class="flex gap-2">
+    <AstroButton color="primary">Submit</AstroButton>
+    <AstroButton>Cancel</AstroButton>
+  </div>
+</div>
+</div>
+
+## Component Features
+
+- **Type-safe**: Full TypeScript support with proper prop types
+- **Accessible**: Built with accessibility best practices
+- **Customizable**: Easy to extend with Tailwind variants
+- **Consistent**: Unified design system across your application
