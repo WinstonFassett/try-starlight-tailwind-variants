@@ -18,15 +18,17 @@ export default defineConfig({
       items: [
       // Each item here is one entry in the navigation menu.
       {
-        label: 'Astro',
-        slug: 'guides/astro'
-      }, {
         label: 'React',
         slug: 'guides/react'
       }, {
         label: 'Svelte',
         slug: 'guides/svelte'
-      }]
+      }
+      {
+        label: 'Astro',
+        slug: 'guides/astro'
+      },
+      ]
     }, {
       label: 'Components',
       autogenerate: {
