@@ -15,6 +15,4 @@
   bind:value 
   class={textarea({ variant, class: $$props.class})} 
   {...$$restProps}
->
-  {value}
-</textarea>
+></textarea>
