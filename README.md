@@ -9,6 +9,63 @@ Multi-Framework Design System built with Tailwind Variants
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/WinstonFassett/try-starlight-tailwind-variants&create_from_path=examples/tailwind)
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%WinstonFassett%2Ftry-starlight-tailwind-variants&project-name=my-starlight-tailwind-variants&repository-name=my-starlight-tailwind-variants)
 
+## 📖 Documentation
+
+Visit the [full documentation site](https://winstonfassett.github.io/try-starlight-tailwind-variants/) for complete guides, component references, and examples.
+
+## 🚀 Quick Start
+
+### React
+
+```bash
+npm install starlight-tailwind-variants react react-dom @types/react @types/react-dom
+```
+
+```tsx
+import { Button } from '@/components/ui/Button'
+
+export function App() {
+  return (
+    <Button color="primary" size="lg">
+      Click me!
+    </Button>
+  )
+}
+```
+
+### Svelte
+
+```bash
+npm install starlight-tailwind-variants svelte @astrojs/svelte
+```
+
+```svelte
+<script>
+  import Button from '@/components/ui/Button.svelte'
+</script>
+
+<Button color="primary" size="lg">
+  Click me!
+</Button>
+```
+
+### Astro
+
+```bash
+npm install starlight-tailwind-variants
+npx astro add tailwind
+```
+
+```astro
+---
+import Button from '@/components/ui/Button.astro'
+---
+
+<Button color="primary" size="lg">
+  Click me!
+</Button>
+```
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
@@ -22,31 +79,69 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 🚀 Project Structure
+## 🏗️ Project Structure
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+The project is organized to support multiple frameworks with shared design tokens:
 
 ```
 .
-├── public/
+├── public/                          # Static assets
 ├── src/
-│   ├── assets/
+│   ├── components/
+│   │   └── ui/                      # UI Components
+│   │       ├── theme/               # Core theme definitions (Tailwind Variants)
+│   │       │   ├── button.ts        # Button theme variants
+│   │       │   ├── input.ts         # Input theme variants
+│   │       │   ├── badge.ts         # Badge theme variants
+│   │       │   └── card.ts          # Card theme variants
+│   │       ├── Button.tsx           # React Button component
+│   │       ├── Button.astro         # Astro Button component
+│   │       ├── Button.svelte        # Svelte Button component
+│   │       ├── Input.tsx            # React Input component
+│   │       ├── Input.astro          # Astro Input component
+│   │       └── Input.svelte         # Svelte Input component
 │   ├── content/
 │   │   ├── docs/
-│   │   └── config.ts
-│   └── env.d.ts
-├── astro.config.mjs
-├── package.json
-├── tailwind.config.mjs
-└── tsconfig.json
+│   │   │   ├── guides/              # Framework-specific guides
+│   │   │   │   ├── react.mdx        # React integration guide
+│   │   │   │   ├── svelte.mdx       # Svelte integration guide
+│   │   │   │   └── astro.mdx        # Astro integration guide
+│   │   │   └── reference/           # Component documentation
+│   │   │       ├── Button.mdx       # Button component docs
+│   │   │       ├── Input.mdx        # Input component docs
+│   │   │       └── Badge.mdx        # Badge component docs
+│   │   └── config.ts                # Content configuration
+│   ├── lib/
+│   │   └── utils.ts                 # Utility functions (cn helper)
+│   ├── tailwind.css                 # Tailwind base styles
+│   └── env.d.ts                     # TypeScript environment types
+├── astro.config.mjs                 # Astro configuration
+├── tailwind.config.mjs              # Tailwind configuration
+├── tsconfig.json                    # TypeScript configuration
+└── package.json                     # Dependencies and scripts
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+### Architecture Overview
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+- **`src/components/ui/theme/`**: Core design system definitions using Tailwind Variants. These files contain the shared styling logic that all framework components use.
 
-Static assets, like favicons, can be placed in the `public/` directory.
+- **`src/components/ui/`**: Framework-specific component implementations. Each component (Button, Input, etc.) has versions for React (`.tsx`), Astro (`.astro`), and Svelte (`.svelte`).
+
+- **`src/content/docs/guides/`**: Framework-specific integration guides showing how to install and use the design system in each framework.
+
+- **`src/content/docs/reference/`**: Component documentation with live examples for all supported frameworks.
+
+This structure ensures consistency across frameworks while allowing each to leverage its specific features and patterns.
+
+## 🎨 Features
+
+- **Multi-Framework Support**: Components for React, Svelte, and Astro
+- **Tailwind Variants**: Consistent styling with powerful variant system
+- **TypeScript**: Full type safety across all frameworks
+- **Dark Mode**: Built-in dark mode support
+- **Accessible**: Components built with accessibility in mind
+- **Customizable**: Easy to extend and customize for your needs
 
 ## 👀 Want to learn more?
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+Check out the [full documentation](https://winstonfassett.github.io/try-starlight-tailwind-variants/), [Starlight's docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
