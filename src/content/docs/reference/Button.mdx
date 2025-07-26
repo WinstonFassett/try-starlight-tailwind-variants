@@ -16,7 +16,7 @@ Buttons are for pressing.
   <AstroButton color="primary">Submit</AstroButton>
   <AstroButton>Cancel</AstroButton>
   <AstroButton color="secondary">Validate</AstroButton>
-  <AstroButton color="primary" style="background-color: rgb(239 68 68); color: white;">Delete</AstroButton>
+  <AstroButton color="destructive">Delete</AstroButton>
 </div>
 
 ### React
@@ -25,7 +25,7 @@ Buttons are for pressing.
   <ReactButton color="primary">Submit</ReactButton>
   <ReactButton>Cancel</ReactButton>
   <ReactButton color="secondary">Validate</ReactButton>
-  <ReactButton color="primary" style={{backgroundColor: 'rgb(239 68 68)', color: 'white'}}>Delete</ReactButton>
+  <ReactButton color="destructive">Delete</ReactButton>
 </div>
 
 ### Svelte
@@ -34,7 +34,7 @@ Buttons are for pressing.
   <SvelteButton color="primary">Submit</SvelteButton>
   <SvelteButton>Cancel</SvelteButton>
   <SvelteButton color="secondary">Validate</SvelteButton>
-  <SvelteButton color="primary" style="background-color: rgb(239 68 68); color: white;">Delete</SvelteButton>
+  <SvelteButton color="destructive">Delete</SvelteButton>
 </div>
 
 ## Examples
@@ -43,35 +43,54 @@ Buttons are for pressing.
 
 #### Astro
 
-<AstroButton color='primary'>Primary</AstroButton>
-<AstroButton color='secondary'>Secondary</AstroButton>
+<div class="flex flex-wrap gap-2">
+  <AstroButton>Default</AstroButton>
+  <AstroButton color='primary'>Primary</AstroButton>
+  <AstroButton color='secondary'>Secondary</AstroButton>
+  <AstroButton color='destructive'>Destructive</AstroButton>
+</div>
 
 #### React
 
-<ReactButton color='primary'>Primary</ReactButton>
-<ReactButton color='secondary'>Secondary</ReactButton>
+<div class="flex flex-wrap gap-2">
+  <ReactButton>Default</ReactButton>
+  <ReactButton color='primary'>Primary</ReactButton>
+  <ReactButton color='secondary'>Secondary</ReactButton>
+  <ReactButton color='destructive'>Destructive</ReactButton>
+</div>
 
 #### Svelte
 
-<SvelteButton color='primary'>Primary</SvelteButton>
-<SvelteButton color='secondary'>Secondary</SvelteButton>
+<div class="flex flex-wrap gap-2">
+  <SvelteButton>Default</SvelteButton>
+  <SvelteButton color='primary'>Primary</SvelteButton>
+  <SvelteButton color='secondary'>Secondary</SvelteButton>
+  <SvelteButton color='destructive'>Destructive</SvelteButton>
+</div>
 
 ### Size
 
 #### Astro
 
-<AstroButton size='sm'>Small</AstroButton>
-<AstroButton size='md'>Medium</AstroButton>
-<AstroButton size='lg'>Large</AstroButton>
+<div class="flex flex-wrap gap-2 items-center">
+  <AstroButton size='sm'>Small</AstroButton>
+  <AstroButton size='md'>Medium</AstroButton>
+  <AstroButton size='lg'>Large</AstroButton>
+</div>
 
 #### React
 
-<ReactButton size='sm'>Small</ReactButton>
-<ReactButton size='md'>Medium</ReactButton>
-<ReactButton size='lg'>Large</ReactButton>
+<div class="flex flex-wrap gap-2 items-center">
+  <ReactButton size='sm'>Small</ReactButton>
+  <ReactButton size='md'>Medium</ReactButton>
+  <ReactButton size='lg'>Large</ReactButton>
+</div>
 
 #### Svelte
 
-<SvelteButton size='sm'>Small</SvelteButton>
-<SvelteButton size='md'>Medium</SvelteButton>
+<div class="flex flex-wrap gap-2 items-center">
+  <SvelteButton size='sm'>Small</SvelteButton>
+  <SvelteButton size='md'>Medium</SvelteButton>
+  <SvelteButton size='lg'>Large</SvelteButton>
+</div>
 

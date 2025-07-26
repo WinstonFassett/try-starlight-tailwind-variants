@@ -1,12 +1,13 @@
 import { tv, type VariantProps } from 'tailwind-variants';
  
 export const button = tv({
-  base: 'font-medium rounded-full hover:opacity-90 active:opacity-80',
+  base: 'font-medium rounded-full hover:opacity-90 active:opacity-80 inline-flex items-center justify-center',
   variants: {
     color: {
       default: '',
       primary: 'bg-blue-500 text-white',
-      secondary: 'bg-purple-500 text-white'
+      secondary: 'bg-purple-500 text-white',
+      destructive: 'bg-red-500 text-white'
     },
     size: {
       sm: 'text-sm',
